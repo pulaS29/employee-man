@@ -1,0 +1,91 @@
+<% include ../partials/header %>
+<% include ../partials/nav-top %>
+    <div class="container-fluid page-body-wrapper">
+<% include ../partials/sidebar %>
+     <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Editing employee information</h4>
+                  <form action="/employee/<%=employee._id%>?_method=PUT" class="form-sample" method="POST">
+                    <p class="card-description">
+                      Personal info
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">First Name</label>
+                          <div class="col-sm-9">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="<%= employee.name %>">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Last Name</label>
+                          <div class="col-sm-9">
+                      <input type="text" class="form-control" id="surname" name="surname" placeholder="Last Name" value="<%= employee.surname %>">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Phone Number</label>
+                          <div class="col-sm-9">
+                      <input type="text" class="form-control" id="contact" name="contact" placeholder="Phone Number" value="<%= employee.contact %>">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Email</label>
+                          <div class="col-sm-9">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<%= employee.email %>">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Role</label>
+                          <div class="col-sm-9">
+                            <select class="form-control" name="role">
+                              <option>Web Design</option>
+                              <option>UI/UX</option>
+                              <option>SEO Specialist</option>
+                              <option>Project Manager</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-success mr-2">Update</button>
+                  </form>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="container-fluid clearfix">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
+              <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
+              <i class="mdi mdi-heart text-danger"></i>
+            </span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+<% include ../partials/footer %>
+

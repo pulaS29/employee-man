@@ -21,6 +21,9 @@ var indexRoutes     = require("./routes/index"),
 
 /* setup main vars */
 mongoose.connect("mongodb+srv://root:StAg!98PS29@cluster0-4ozub.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
+
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));

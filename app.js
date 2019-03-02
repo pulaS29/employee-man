@@ -20,8 +20,6 @@ var indexRoutes     = require("./routes/index"),
     employeeRoutes  = require("./routes/employee");
 
 /* setup main vars */
-mongoose.connect("mongodb+srv://root:StAg!98PS29@cluster0-4ozub.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
-
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
